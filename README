@@ -1,0 +1,24 @@
+
+Author: Sam Olof
+Date: 02-24-2009
+Desc:	Deploys Java web applications to a local or remote Apache Tomcat server
+	It takes all source and auxilliary file in a directory (should have a flat 
+	structure), creates a deployment descriptor file, compiles all Java class 
+	files, creates a WAR archive and deploys them to the local or remote server.
+	It will also organize all supporting files such as image, javascript and 
+	resource jars, updating the relative path references to them within your 
+	source code.
+
+	Tested on FreeBSD and Debian. Not tested extensively.
+
+	
+
+Usage: ./tomcat_deploy [-g] [-t path/to/tomcat/root ] [path/to/files ] 
+ 	
+	-g or --graphical:	optional flag to run in graphical mode (requires zenity)
+	-t or --tomcat-home: 	use this flag to specify the path to the Tomcat Home 
+				directory. If the server is on a remote host precede the
+				path name with the hostname or ip address followed by a 
+				colon and the path i.e "<hostname>:<path>"
+	
+				
